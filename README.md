@@ -70,18 +70,34 @@ Start the server:
 npm run dev
 ```
 
-### 3. Frontend Setup
+### 3. Admin Dashboard Setup
 ```bash
-cd ../client
+cd ../admin-dashboard
 npm install
 ```
 
-Create `.env` file in the client directory:
+Create `.env` file in the admin-dashboard directory:
 ```env
 REACT_APP_API_URL=http://localhost:5000/api
 ```
 
-Start the client:
+Start the admin dashboard:
+```bash
+npm start
+```
+
+### 4. Customer Frontend Setup
+```bash
+cd ../customer-frontend
+npm install
+```
+
+Create `.env` file in the customer-frontend directory:
+```env
+REACT_APP_API_URL=http://localhost:5000/api
+```
+
+Start the customer app:
 ```bash
 npm start
 ```
@@ -159,25 +175,34 @@ restaurant-admin-dashboard/
 │   ├── scripts/
 │   │   └── seed.js
 │   └── server.js
-└── client/
+├── admin-dashboard/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── UI.jsx
+│   │   │   ├── MenuCard.jsx
+│   │   │   └── MenuForm.jsx
+│   │   ├── pages/
+│   │   │   ├── MenuManagement.jsx
+│   │   │   └── OrdersDashboard.jsx
+│   │   ├── hooks/
+│   │   │   ├── useDebounce.js
+│   │   │   └── useFetch.js
+│   │   ├── context/
+│   │   │   └── MenuContext.jsx
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   ├── types/
+│   │   │   └── index.js
+│   │   └── App.jsx
+│   └── public/
+└── customer-frontend/
     ├── src/
-    │   ├── components/
-    │   │   ├── UI.tsx
-    │   │   ├── MenuCard.tsx
-    │   │   └── MenuForm.tsx
-    │   ├── pages/
-    │   │   ├── MenuManagement.tsx
-    │   │   └── OrdersDashboard.tsx
-    │   ├── hooks/
-    │   │   ├── useDebounce.ts
-    │   │   └── useFetch.ts
-    │   ├── context/
-    │   │   └── MenuContext.tsx
-    │   ├── services/
-    │   │   └── api.ts
-    │   ├── types/
-    │   │   └── index.ts
-    │   └── App.tsx
+    │   ├── CartContext.jsx
+    │   ├── MenuItemCard.jsx
+    │   ├── Cart.jsx
+    │   ├── api.js
+    │   ├── types.js
+    │   └── App.jsx
     └── public/
 ```
 
