@@ -1,0 +1,23 @@
+# Admin Dashboard
+[[build]]
+  base = "admin-dashboard/"
+  command = "npm run build"
+  publish = "admin-dashboard/build"
+
+[build.environment]
+  REACT_APP_API_URL = "https://your-backend-url.onrender.com/api"
+
+# Customer Frontend  
+[[build]]
+  base = "customer-frontend/"
+  command = "npm run build"
+  publish = "customer-frontend/build"
+
+[build.environment]
+  REACT_APP_API_URL = "https://your-backend-url.onrender.com/api"
+
+# Redirects for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
